@@ -1,0 +1,360 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Sheep's Journey Home – Support & Privacy</title>
+<meta name="description" content="Support and privacy policy for The Sheep's Journey Home iOS game.">
+<style>
+  :root {
+    --bg: #f6faee;
+    --card: #ffffff;
+    --text: #2a2418;
+    --muted: #6a6454;
+    --accent: #3f8a0c;
+    --link: #2f7a08;
+    --line: #e1e8d2;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #141a0f;
+      --card: #1d2616;
+      --text: #ecf0e2;
+      --muted: #a6b096;
+      --accent: #8fd34a;
+      --link: #9bdc5c;
+      --line: #2c3a21;
+    }
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font: 16px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  }
+  header {
+    position: relative;
+    background: linear-gradient(180deg, #3f8a0c, #9bd957);
+    color: #fff;
+    padding: 56px 16px 40px;
+    text-align: center;
+  }
+  header img { width: 96px; height: 96px; border-radius: 22px; box-shadow: 0 6px 20px rgba(0,0,0,.22); }
+  header h1 { margin: 16px 0 4px; font-size: 32px; }
+  header p { margin: 0; opacity: .92; }
+
+  .lang-switch {
+    position: absolute; top: 16px; right: 16px;
+    display: inline-flex; padding: 3px; border-radius: 999px;
+    background: rgba(255,255,255,.22);
+  }
+  .lang-switch button {
+    border: 0; background: transparent; color: #fff; cursor: pointer;
+    font: 600 14px/1 inherit; font-family: inherit;
+    padding: 8px 14px; border-radius: 999px;
+  }
+  .lang-switch button[aria-pressed="true"] { background: #fff; color: #2f6f08; }
+
+  nav { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; margin-top: 20px; }
+  nav a {
+    color: #fff; text-decoration: none; font-weight: 600;
+    padding: 8px 16px; border-radius: 999px; background: rgba(255,255,255,.2);
+  }
+  main { max-width: 760px; margin: 0 auto; padding: 8px 16px 48px; }
+  section {
+    background: var(--card); border: 1px solid var(--line); border-radius: 16px;
+    padding: 24px; margin-top: 24px; scroll-margin-top: 16px;
+  }
+  h2 { margin-top: 0; font-size: 24px; }
+  h3 { margin-bottom: 4px; font-size: 18px; }
+  a { color: var(--link); }
+  .muted { color: var(--muted); }
+  footer { text-align: center; color: var(--muted); font-size: 14px; padding: 0 16px 32px; }
+
+  /* Only the selected language is shown. */
+  [data-lang] { display: none; }
+  html[lang="en"] [data-lang="en"], html[lang="vi"] [data-lang="vi"] { display: revert; }
+</style>
+<script>
+  // Pick the language before first paint: ?lang= > saved choice > browser language.
+  (function () {
+    var lang = new URLSearchParams(location.search).get("lang");
+    if (lang !== "en" && lang !== "vi") {
+      try { lang = localStorage.getItem("lang"); } catch (e) { lang = null; }
+    }
+    if (lang !== "en" && lang !== "vi") {
+      lang = (navigator.language || "en").toLowerCase().indexOf("vi") === 0 ? "vi" : "en";
+    }
+    document.documentElement.lang = lang;
+  })();
+</script>
+</head>
+<body>
+<header>
+  <div class="lang-switch" role="group" aria-label="Language">
+    <button type="button" data-set-lang="en">EN</button>
+    <button type="button" data-set-lang="vi">VI</button>
+  </div>
+  <img src="icon.png" alt="The Sheep's Journey Home">
+  <h1>The Sheep's Journey Home</h1>
+  <p data-lang="en">Guide Rocky, Billy &amp; Tiny home</p>
+  <p data-lang="vi">Đưa Rocky, Billy &amp; Tiny về nhà</p>
+  <nav>
+    <a href="#about"><span data-lang="en">About</span><span data-lang="vi">Giới thiệu</span></a>
+    <a href="#support"><span data-lang="en">Support</span><span data-lang="vi">Hỗ trợ</span></a>
+    <a href="#privacy"><span data-lang="en">Privacy Policy</span><span data-lang="vi">Quyền riêng tư</span></a>
+  </nav>
+</header>
+
+<main>
+  <!-- About -->
+  <section id="about">
+    <div data-lang="en">
+      <h2>About</h2>
+      <p>The Sheep's Journey Home is a charming puzzle-platformer. Three little sheep, Rocky, Billy and Tiny, have wandered far from the farm, and it is up to you to guide them back. Walk, jump and push your way across 15 hand-drawn levels, switching between the three sheep, because every level needs all of them working together.</p>
+      <h3>Meet the Flock</h3>
+      <ul>
+        <li><strong>Rocky</strong> is the biggest and sturdiest, with a wide stance and a quick start.</li>
+        <li><strong>Billy</strong> is the athlete: the highest jump and the fastest top speed.</li>
+        <li><strong>Tiny</strong> is the smallest and fits into narrow gaps and onto thin ledges the others cannot reach.</li>
+      </ul>
+      <h3>How To Play</h3>
+      <ul>
+        <li>Use the arrow buttons on screen to walk and jump</li>
+        <li>Tap a sheep to take control of it</li>
+        <li>Get all three sheep to the exit to finish the level</li>
+        <li>Finish faster to earn up to 3 stars</li>
+      </ul>
+      <h3>Features</h3>
+      <ul>
+        <li>15 hand-drawn levels</li>
+        <li>Three sheep with different strengths, switch between them at any time</li>
+        <li>Up to 3 stars on every level, shown on the level select screen</li>
+        <li>Available in English, Tiếng Việt, 简体中文, 한국어, 日本語, Español, Português and Русский</li>
+        <li>Free to play with ads and a number of free plays every day. A short ad gives you more plays. Pro is a one-time purchase that gives unlimited plays and removes all ads</li>
+        <li>Plays on iPhone and iPad, in landscape</li>
+      </ul>
+      <p>Can you bring everyone home?</p>
+    </div>
+
+    <div data-lang="vi">
+      <h2>Giới thiệu</h2>
+      <p>The Sheep's Journey Home là game giải đố đi cảnh dễ thương. Ba chú cừu nhỏ Rocky, Billy và Tiny đã đi lạc xa nông trại, và bạn là người dẫn các chú về nhà. Đi, nhảy và đẩy vượt qua 15 màn chơi vẽ tay, đổi qua lại giữa ba chú cừu, vì mỗi màn đều cần cả ba phối hợp với nhau.</p>
+      <h3>Gặp gỡ bộ ba</h3>
+      <ul>
+        <li><strong>Rocky</strong> to khỏe và vững chãi nhất, bước chân rộng và xuất phát nhanh.</li>
+        <li><strong>Billy</strong> là vận động viên: nhảy cao nhất và chạy nhanh nhất.</li>
+        <li><strong>Tiny</strong> nhỏ nhất, chui được vào khe hẹp và đứng được trên mỏm mảnh mà hai bạn kia không tới được.</li>
+      </ul>
+      <h3>Cách chơi</h3>
+      <ul>
+        <li>Dùng các nút mũi tên trên màn hình để đi và nhảy</li>
+        <li>Chạm vào một chú cừu để điều khiển chú đó</li>
+        <li>Đưa cả ba chú cừu tới cửa ra để hoàn thành màn chơi</li>
+        <li>Hoàn thành càng nhanh càng được nhiều sao, tối đa 3 sao</li>
+      </ul>
+      <h3>Tính năng</h3>
+      <ul>
+        <li>15 màn chơi vẽ tay</li>
+        <li>Ba chú cừu với sở trường khác nhau, đổi qua lại bất cứ lúc nào</li>
+        <li>Tối đa 3 sao mỗi màn, hiển thị ngay ở màn chọn level</li>
+        <li>Có tiếng Anh, Tiếng Việt, 简体中文, 한국어, 日本語, Español, Português và Русский</li>
+        <li>Miễn phí có quảng cáo, mỗi ngày có một số lượt chơi miễn phí. Xem quảng cáo ngắn để nhận thêm lượt. Pro là giao dịch mua một lần, chơi không giới hạn và bỏ toàn bộ quảng cáo</li>
+        <li>Chơi được trên iPhone và iPad, màn hình ngang</li>
+      </ul>
+      <p>Bạn có đưa được cả đàn về nhà không?</p>
+    </div>
+  </section>
+
+  <!-- Support -->
+  <section id="support">
+    <div data-lang="en">
+      <h2>Support</h2>
+      <p>Need help with The Sheep's Journey Home, found a bug, or have a suggestion? Send us an email and we will get back to you as soon as we can.</p>
+      <p class="muted">Please include your device model and iOS / iPadOS version.</p>
+
+      <h3>How do I play?</h3>
+      <p>Use the arrow buttons at the bottom of the screen: left and right to walk, up to jump. Tap a sheep to control it. A level is finished when all three sheep reach the exit.</p>
+
+      <h3>How do I switch sheep?</h3>
+      <p>Tap the sheep you want to control, at any time during a level. Each sheep is good at something different: Rocky is big and quick off the mark, Billy jumps highest and runs fastest, and Tiny fits into narrow gaps.</p>
+
+      <h3>How are stars worked out?</h3>
+      <p>You earn up to 3 stars on each level, depending on how quickly you finish it. Faster means more stars. Your best result is kept and shown on the level select screen.</p>
+
+      <h3>How do I open the next level?</h3>
+      <p>Finish a level to open the next one. Levels you have opened show their stars on the level select screen, and locked levels show a padlock.</p>
+
+      <h3>How do I restart a level?</h3>
+      <p>Tap the <em>Replay</em> button (the circular arrow) at the top of the screen. To pick another level, tap the <em>Level select</em> button.</p>
+
+      <h3>What are plays?</h3>
+      <p>Every attempt costs one play: failing a level or restarting it uses one. You get a number of free plays every day, and they refill daily. The number on the ad button shows how many plays you have left. When you run out, you can watch a short ad for more. Plays earned from ads add up and do not expire. <em>Pro</em> gives you unlimited plays.</p>
+
+      <h3>What is Pro?</h3>
+      <p>Pro is a one-time purchase. It gives unlimited plays and removes all ads. Tap the <em>Pro</em> button on the title screen to buy it, or to <em>Restore Purchase</em> if you already bought it on another device or after reinstalling.</p>
+
+      <h3>How do I change the language?</h3>
+      <p>On the title screen, tap the language button and choose one of the eight languages. The choice is remembered.</p>
+
+      <h3>How do I turn the sound off?</h3>
+      <p>Tap the speaker button at the top of the screen. It switches all sound on or off, and the choice is remembered.</p>
+
+      <h3>The game is too small or too big on my screen</h3>
+      <p>Tap the zoom button at the top of the screen to switch between showing the whole level and filling the screen width. When zoomed in, drag up or down to see the rest.</p>
+
+      <h3>My progress is gone</h3>
+      <p>Progress is stored only on your device. Deleting the app also deletes your unlocked levels and stars. Purchases are not lost: use <em>Restore Purchase</em> to get Pro back.</p>
+    </div>
+
+    <div data-lang="vi">
+      <h2>Hỗ trợ</h2>
+      <p>Cần trợ giúp, gặp lỗi hoặc có góp ý về The Sheep's Journey Home? Hãy gửi email cho chúng tôi, chúng tôi sẽ phản hồi sớm nhất có thể.</p>
+      <p class="muted">Vui lòng ghi kèm tên thiết bị và phiên bản iOS / iPadOS.</p>
+
+      <h3>Chơi như thế nào?</h3>
+      <p>Dùng các nút mũi tên ở cuối màn hình: trái và phải để đi, lên để nhảy. Chạm vào một chú cừu để điều khiển chú đó. Màn chơi hoàn thành khi cả ba chú cừu tới được cửa ra.</p>
+
+      <h3>Làm sao đổi cừu?</h3>
+      <p>Chạm vào chú cừu bạn muốn điều khiển, bất cứ lúc nào trong màn chơi. Mỗi chú giỏi một việc: Rocky to khỏe và xuất phát nhanh, Billy nhảy cao nhất và chạy nhanh nhất, còn Tiny chui được vào khe hẹp.</p>
+
+      <h3>Sao được tính thế nào?</h3>
+      <p>Bạn nhận tối đa 3 sao mỗi màn, tuỳ vào tốc độ hoàn thành. Càng nhanh càng được nhiều sao. Kết quả tốt nhất được lưu lại và hiển thị ở màn chọn level.</p>
+
+      <h3>Làm sao mở màn tiếp theo?</h3>
+      <p>Hoàn thành một màn để mở màn kế tiếp. Các màn đã mở hiển thị số sao ở màn chọn level, còn màn chưa mở có ổ khoá.</p>
+
+      <h3>Làm sao chơi lại một màn?</h3>
+      <p>Chạm nút <em>Chơi lại</em> (mũi tên tròn) ở phía trên màn hình. Để chọn màn khác, chạm nút <em>Chọn màn</em>.</p>
+
+      <h3>Lượt chơi là gì?</h3>
+      <p>Mỗi lần thử tốn một lượt: thua màn hoặc chơi lại đều tính một lượt. Mỗi ngày bạn có một số lượt chơi miễn phí và số lượt được làm đầy lại hằng ngày. Con số trên nút quảng cáo cho biết bạn còn bao nhiêu lượt. Khi hết lượt, bạn có thể xem một quảng cáo ngắn để nhận thêm. Lượt nhận từ quảng cáo được cộng dồn và không hết hạn. <em>Pro</em> cho bạn lượt chơi không giới hạn.</p>
+
+      <h3>Pro là gì?</h3>
+      <p>Pro là giao dịch mua một lần. Gói này cho lượt chơi không giới hạn và bỏ toàn bộ quảng cáo. Chạm nút <em>Pro</em> ở màn hình chính để mua, hoặc để <em>Khôi phục giao dịch</em> nếu bạn đã mua trên thiết bị khác hoặc sau khi cài lại ứng dụng.</p>
+
+      <h3>Làm sao đổi ngôn ngữ?</h3>
+      <p>Ở màn hình chính, chạm nút ngôn ngữ rồi chọn một trong tám ngôn ngữ. Lựa chọn được ghi nhớ.</p>
+
+      <h3>Làm sao tắt âm thanh?</h3>
+      <p>Chạm nút loa ở phía trên màn hình. Nút này bật hoặc tắt toàn bộ âm thanh và lựa chọn được ghi nhớ.</p>
+
+      <h3>Game quá nhỏ hoặc quá to trên màn hình của tôi</h3>
+      <p>Chạm nút phóng to ở phía trên màn hình để chuyển giữa xem toàn bộ màn chơi và lấp đầy chiều rộng màn hình. Khi phóng to, kéo lên hoặc xuống để xem phần còn lại.</p>
+
+      <h3>Tiến trình của tôi bị mất</h3>
+      <p>Tiến trình chỉ được lưu trên thiết bị của bạn. Xoá ứng dụng cũng sẽ xoá các màn đã mở và số sao. Giao dịch mua không bị mất: dùng <em>Khôi phục giao dịch</em> để lấy lại Pro.</p>
+    </div>
+  </section>
+
+  <!-- Privacy -->
+  <section id="privacy">
+    <div data-lang="en">
+      <h2>Privacy Policy</h2>
+      <p class="muted">Last updated: November 11, 2026</p>
+      <p>This policy explains how The Sheep's Journey Home app (“the app”) handles your information.</p>
+
+      <h3>Data we collect</h3>
+      <p>The app has no accounts and we do not ask for your name, email or any other personal details. We do not collect your game progress: it stays on your device.</p>
+      <p>The app uses third-party services that collect some data on our behalf or their own:</p>
+      <ul>
+        <li><strong>Google AdMob</strong> shows the ads. It may collect device identifiers (such as the advertising identifier, if you allow tracking), IP address, approximate location and ad interaction data to serve and measure ads and prevent fraud.</li>
+        <li><strong>Firebase Analytics</strong> records anonymous usage events (for example a level started, finished or failed, the stars earned, or the language chosen) and device and app information, to help us improve the game. The advertising identifier is not collected by Firebase Analytics.</li>
+        <li><strong>Firebase Remote Config</strong> downloads app settings, such as how many free plays you get each day and how often ads are shown.</li>
+        <li><strong>Apple</strong> handles purchases. We never see your payment details. The app only learns whether Pro is unlocked.</li>
+      </ul>
+
+      <h3>Your choices</h3>
+      <ul>
+        <li>On first launch the app asks permission to track you across other companies’ apps and websites. If you decline, ads are not personalized.</li>
+        <li>If you are in the European Economic Area, the United Kingdom or a similar region, a consent form lets you choose how ad data is used.</li>
+        <li>You can buy <em>Pro</em> to remove all ads.</li>
+        <li>You can change tracking permission at any time in iOS Settings → Privacy &amp; Security → Tracking.</li>
+      </ul>
+
+      <h3>Data stored on your device</h3>
+      <p>The app saves your unlocked levels, your best results and stars, your play count, and your sound and language settings locally on your device. This data stays on your device and is removed when you delete the app.</p>
+
+      <h3>Internet</h3>
+      <p>An internet connection is used to show ads, to buy or restore purchases, to update the app settings, and to check whether a newer version is available (the app asks Apple’s App Store lookup service for its own version, using the app’s identifier and your device’s region). The app may also ask you for a review through Apple’s standard review prompt.</p>
+
+      <h3>Children’s privacy</h3>
+      <p>We do not knowingly collect personal information from children. Ads are served by Google AdMob and are limited by the settings above. Parents can remove all ads with a one-time purchase of Pro.</p>
+
+      <h3>Changes to this policy</h3>
+      <p>If this policy changes, we will update this page and the date above.</p>
+
+      <h3>Contact</h3>
+      <p>Questions about this policy? Email <a href="mailto:vudinhhuyit@gmail.com">vudinhhuyit@gmail.com</a>.</p>
+    </div>
+
+    <div data-lang="vi">
+      <h2>Chính sách quyền riêng tư</h2>
+      <p class="muted">Cập nhật lần cuối: 11/11/2026</p>
+      <p>Chính sách này giải thích cách ứng dụng The Sheep's Journey Home (“ứng dụng”) xử lý thông tin của bạn.</p>
+
+      <h3>Dữ liệu chúng tôi thu thập</h3>
+      <p>Ứng dụng không có tài khoản và chúng tôi không yêu cầu tên, email hay bất kỳ thông tin cá nhân nào. Chúng tôi không thu thập tiến trình chơi của bạn: dữ liệu này chỉ nằm trên thiết bị.</p>
+      <p>Ứng dụng dùng các dịch vụ của bên thứ ba, họ có thể thu thập một số dữ liệu thay mặt chúng tôi hoặc cho mục đích riêng của họ:</p>
+      <ul>
+        <li><strong>Google AdMob</strong> hiển thị quảng cáo. Dịch vụ này có thể thu thập mã định danh thiết bị (như mã định danh quảng cáo, nếu bạn cho phép theo dõi), địa chỉ IP, vị trí gần đúng và dữ liệu tương tác với quảng cáo để phân phối, đo lường quảng cáo và chống gian lận.</li>
+        <li><strong>Firebase Analytics</strong> ghi lại các sự kiện sử dụng ẩn danh (ví dụ bắt đầu, hoàn thành hoặc thua một màn, số sao đạt được, ngôn ngữ đã chọn) cùng thông tin thiết bị và ứng dụng, giúp chúng tôi cải thiện trò chơi. Firebase Analytics không thu thập mã định danh quảng cáo.</li>
+        <li><strong>Firebase Remote Config</strong> tải các cài đặt của ứng dụng, chẳng hạn mỗi ngày bạn có bao nhiêu lượt chơi miễn phí và tần suất hiển thị quảng cáo.</li>
+        <li><strong>Apple</strong> xử lý các giao dịch mua. Chúng tôi không bao giờ thấy thông tin thanh toán của bạn. Ứng dụng chỉ biết Pro đã được mở khoá hay chưa.</li>
+      </ul>
+
+      <h3>Lựa chọn của bạn</h3>
+      <ul>
+        <li>Lần đầu mở ứng dụng, ứng dụng xin phép theo dõi bạn trên các ứng dụng và trang web của công ty khác. Nếu bạn từ chối, quảng cáo sẽ không được cá nhân hoá.</li>
+        <li>Nếu bạn ở Khu vực Kinh tế Châu Âu, Vương quốc Anh hoặc khu vực tương tự, một biểu mẫu đồng ý cho phép bạn chọn cách dữ liệu quảng cáo được sử dụng.</li>
+        <li>Bạn có thể mua <em>Pro</em> để bỏ toàn bộ quảng cáo.</li>
+        <li>Bạn có thể đổi quyền theo dõi bất cứ lúc nào trong Cài đặt iOS → Quyền riêng tư &amp; Bảo mật → Theo dõi.</li>
+      </ul>
+
+      <h3>Dữ liệu lưu trên thiết bị</h3>
+      <p>Ứng dụng lưu các màn đã mở, kết quả tốt nhất, số sao, số lượt chơi cùng cài đặt âm thanh và ngôn ngữ ngay trên thiết bị của bạn. Dữ liệu này chỉ nằm trên thiết bị và sẽ bị xoá khi bạn xoá ứng dụng.</p>
+
+      <h3>Internet</h3>
+      <p>Kết nối internet được dùng để hiển thị quảng cáo, mua hoặc khôi phục giao dịch, cập nhật cài đặt ứng dụng và kiểm tra xem có phiên bản mới hay không (ứng dụng hỏi dịch vụ tra cứu của Apple App Store về phiên bản của chính nó, dùng mã định danh của ứng dụng và khu vực của thiết bị). Ứng dụng cũng có thể xin bạn đánh giá thông qua hộp thoại đánh giá tiêu chuẩn của Apple.</p>
+
+      <h3>Quyền riêng tư của trẻ em</h3>
+      <p>Chúng tôi không cố ý thu thập thông tin cá nhân của trẻ em. Quảng cáo do Google AdMob phân phối và bị giới hạn bởi các cài đặt ở trên. Phụ huynh có thể bỏ toàn bộ quảng cáo bằng một giao dịch mua Pro một lần.</p>
+
+      <h3>Thay đổi chính sách</h3>
+      <p>Nếu chính sách thay đổi, chúng tôi sẽ cập nhật trang này và ngày ở trên.</p>
+
+      <h3>Liên hệ</h3>
+      <p>Có câu hỏi về chính sách này? Hãy gửi email tới <a href="mailto:vudinhhuyit@gmail.com">vudinhhuyit@gmail.com</a>.</p>
+    </div>
+  </section>
+
+  <!-- Download: add after the app is on the App Store (same block as the other games: store button + qr-appstore.png)
+  <section id="download" class="download"> ... </section>
+  -->
+</main>
+
+<footer>© 2026 The Sheep's Journey Home · Version 1.0.0</footer>
+
+<script>
+  (function () {
+    var root = document.documentElement;
+    var buttons = document.querySelectorAll("[data-set-lang]");
+    var titles = { en: "The Sheep's Journey Home – Support & Privacy", vi: "The Sheep's Journey Home – Hỗ trợ & Quyền riêng tư" };
+    function apply(lang) {
+      root.lang = lang;
+      document.title = titles[lang];
+      buttons.forEach(function (b) { b.setAttribute("aria-pressed", String(b.dataset.setLang === lang)); });
+    }
+    buttons.forEach(function (b) {
+      b.addEventListener("click", function () {
+        apply(b.dataset.setLang);
+        try { localStorage.setItem("lang", b.dataset.setLang); } catch (e) {}
+      });
+    });
+    apply(root.lang);
+  })();
+</script>
+</body>
+</html>
